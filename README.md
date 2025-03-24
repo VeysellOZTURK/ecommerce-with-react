@@ -32,7 +32,14 @@ cd hyper-teknoloji-frontend
 npm install
 ```
 
-3. Start the development server:
+3. Edit your API_KEY to .env file:
+```bash
+VITE_API_URL= Your Api Url
+VITE_API_KEY= Your Api Key
+VITE_API_TOKEN= Your Api Token
+```
+
+4. Start the development server:
 ```bash
 npm start
 ```

@@ -14,7 +14,6 @@ function App() {
   const theme = useSelector(selectTheme);
   
   useEffect(() => {
-    // Apply theme to the document
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
     } else {

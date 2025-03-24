@@ -23,8 +23,8 @@ This is a responsive e-commerce front-end application built with React and Redux
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/hyper-teknoloji-frontend.git
-cd hyper-teknoloji-frontend
+git clone https://github.com/VeysellOZTURK/ecommerce-with-react.git
+cd ecommerce-with-react
 ```
 
 2. Install dependencies:
@@ -44,7 +44,7 @@ VITE_API_TOKEN= Your Api Token
 npm start
 ```
 
-4. Open your browser and navigate to `http://localhost:3000`
+4. Open your browser and navigate to `http://localhost:3000` (May vary depending on port space.)
 
 ## Project Structure
 

@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#html, #root {
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  align-items: center;
+
+}
+
+body {
+  transition: background-color 1.0s ease, color 1.0s ease;
+  background-image: url('./assets/background/bg.webp');
+  background-repeat: none;
+  background-size: cover;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212; 
+  z-index: 1;
+  transform: translateY(-100%);
+  transition: transform 3.0s ease-in-out;
+}
+
+
+body.light-mode {
+  background-color: #fdfdfd;
+  color: #0C0E2B;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #3a3a3a;
+  color: #fdfdfd;
+}
+
+body.dark-mode::before {
+  transform: translateY(0); 
+}
+
+body.light-mode::before {
+  transform: translateY(-100%); 
+}
+
+
+header.light-mode {
+  background-color: #fdfdfd;
+  color: #161939;
+}
+
+/* Dark Mode */
+header.dark-mode {
+  background-color: #121212;
+  color: #fdfdfd;
+}
+
+header.dark-mode::before {
+  transform: translateY(0); 
+}
+
+header.light-mode::before {
+  transform: translateY(-100%); 
+}
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900 dark:bg-dark-bg dark:text-dark-text;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-blue-600;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-dark-card rounded-lg shadow-md overflow-hidden transition-all;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+} */
+

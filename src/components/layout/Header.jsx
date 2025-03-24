@@ -29,8 +29,8 @@ const Header = () => {
       }}
       className="z-30 dark:bg-dark-card shadow-2xl rounded-b-2xl sticky top-0"
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl text-primary leading-6 font-thin">
+      <div className="text-black container mx-auto px-4 py-4 flex justify-between items-center">
+        <Link to="/" className="text-md lg:text-2xl text-primary leading-6 font-thin">
           Veysel OZTURK
         </Link>
 

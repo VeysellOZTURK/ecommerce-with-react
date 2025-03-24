@@ -38,6 +38,7 @@ body.light-mode {
   color: #0C0E2B;
 }
 
+/* Dark Mode */
 body.dark-mode {
   background-color: #3a3a3a;
   color: #fdfdfd;
@@ -57,6 +58,7 @@ header.light-mode {
   color: #161939;
 }
 
+/* Dark Mode */
 header.dark-mode {
   background-color: #121212;
   color: #fdfdfd;

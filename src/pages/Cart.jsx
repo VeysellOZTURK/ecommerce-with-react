@@ -105,7 +105,7 @@ const CartPage = () => {
             
             <div className="flex justify-between py-2 border-b dark:border-gray-700">
               <span>Ara Toplam</span>
-              <span>${totalAmount.toFixed(2)}</span>
+              <span>₺{totalAmount.toFixed(2)}</span>
             </div>
             
             <div className="flex justify-between py-2 border-b dark:border-gray-700">
@@ -115,7 +115,7 @@ const CartPage = () => {
             
             <div className="flex justify-between py-2 text-lg font-semibold">
               <span>Toplam</span>
-              <span>${totalAmount.toFixed(2)}</span>
+              <span>₺{totalAmount.toFixed(2)}</span>
             </div>
             
             <Link 

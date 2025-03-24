@@ -42,7 +42,7 @@ const Footer = () => {
     style={{
       background: "linear-gradient(90deg, rgba(249,183,103,1) 10%, rgba(252,230,108,1) 90%)"
     }}
-    className="shadow-2xl mt-12">
+    className="shadow-2xl mt-12 text-black">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">

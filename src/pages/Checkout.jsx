@@ -70,9 +70,9 @@ const CheckoutPage = () => {
   }
   
   return (
-    <div className="container mx-auto px-4 text-black">
+    <div className="container mx-auto px-4 ">
       <h1 className="text-3xl font-bold mb-8">Ödeme</h1>
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-8 text-black">
         <div className="lg:w-2/3">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="bg-white dark:bg-dark-card rounded-lg shadow-md p-6">
@@ -82,9 +82,10 @@ const CheckoutPage = () => {
                   <label htmlFor="firstName" className="block mb-1 font-medium">Ad</label>
                   <input
                     type="text"
+                    placeholder='Veysel'
                     id="firstName"
                     {...register('firstName')}
-                    className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.firstName ? 'border-red-500' : ''}`}
+                    className={ `w-full w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.firstName ? 'border-red-500' : ''}`}
                   />
                   {errors.firstName && <p className="mt-1 text-red-500 text-sm">{errors.firstName.message}</p>}
                 </div>
@@ -92,9 +93,10 @@ const CheckoutPage = () => {
                   <label htmlFor="lastName" className="block mb-1 font-medium">Soyad</label>
                   <input
                     type="text"
+                    placeholder='ÖZTÜRK'
                     id="lastName"
                     {...register('lastName')}
-                    className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.lastName ? 'border-red-500' : ''}`}
+                    className={`w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.lastName ? 'border-red-500' : ''}`}
                   />
                   {errors.lastName && <p className="mt-1 text-red-500 text-sm">{errors.lastName.message}</p>}
                 </div>
@@ -102,9 +104,10 @@ const CheckoutPage = () => {
                   <label htmlFor="email" className="block mb-1 font-medium">E-posta</label>
                   <input
                     type="email"
+                    placeholder='veyselozturkeng@gmail.com'
                     id="email"
                     {...register('email')}
-                    className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.email ? 'border-red-500' : ''}`}
+                    className={`w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.email ? 'border-red-500' : ''}`}
                   />
                   {errors.email && <p className="mt-1 text-red-500 text-sm">{errors.email.message}</p>}
                 </div>
@@ -112,19 +115,21 @@ const CheckoutPage = () => {
                   <label htmlFor="phone" className="block mb-1 font-medium">Telefon</label>
                   <input
                     type="text"
+                    placeholder='+90 541 474 94 15'
                     id="phone"
                     {...register('phone')}
-                    className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.phone ? 'border-red-500' : ''}`}
+                    className={`w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.phone ? 'border-red-500' : ''}`}
                   />
                   {errors.phone && <p className="mt-1 text-red-500 text-sm">{errors.phone.message}</p>}
                 </div>
                 <div className="md:col-span-2">
                   <label htmlFor="address" className="block mb-1 font-medium">Adres</label>
                   <input
-                    type="text"
+                    type="textarea"
+                    placeholder='İzmit Mh. Sk. No:'
                     id="address"
                     {...register('address')}
-                    className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.address ? 'border-red-500' : ''}`}
+                    className={`w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.address ? 'border-red-500' : ''}`}
                   />
                   {errors.address && <p className="mt-1 text-red-500 text-sm">{errors.address.message}</p>}
                 </div>
@@ -132,9 +137,10 @@ const CheckoutPage = () => {
                   <label htmlFor="city" className="block mb-1 font-medium">Şehir</label>
                   <input
                     type="text"
+                    placeholder='Kocaeli'
                     id="city"
                     {...register('city')}
-                    className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.city ? 'border-red-500' : ''}`}
+                    className={`w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.city ? 'border-red-500' : ''}`}
                   />
                   {errors.city && <p className="mt-1 text-red-500 text-sm">{errors.city.message}</p>}
                 </div>
@@ -142,9 +148,10 @@ const CheckoutPage = () => {
                   <label htmlFor="zipCode" className="block mb-1 font-medium">Posta Kodu</label>
                   <input
                     type="text"
+                    placeholder='41300'
                     id="zipCode"
                     {...register('zipCode')}
-                    className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.zipCode ? 'border-red-500' : ''}`}
+                    className={`w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.zipCode ? 'border-red-500' : ''}`}
                   />
                   {errors.zipCode && <p className="mt-1 text-red-500 text-sm">{errors.zipCode.message}</p>}
                 </div>
@@ -160,10 +167,10 @@ const CheckoutPage = () => {
                       {cardDetails.cardName || "AD SOYAD"}
                     </div>
                     <div className="absolute bottom-4 right-6 text-sm">
-                      {cardDetails.expiryDate || "MM/YY"}
+                      {cardDetails.expiryDate || "AA/YY"}
                     </div>
                 </div>
-              <div className="space-y-4 grid grid-cols-1 lg:grid-cols-2">
+              <div className="space-y-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="cardNumber" className="block mb-1 font-medium">Kart Numarası</label>
                   <input
@@ -172,7 +179,7 @@ const CheckoutPage = () => {
                     placeholder="XXXX XXXX XXXX XXXX"
                     {...register('cardNumber')}
                     onChange={handleChange}
-                    className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.cardNumber ? 'border-red-500' : ''}`}
+                    className={`w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.cardNumber ? 'border-red-500' : ''}`}
                   />
                   {errors.cardNumber && <p className="mt-1 text-red-500 text-sm">{errors.cardNumber.message}</p>}
                 </div>
@@ -180,10 +187,11 @@ const CheckoutPage = () => {
                   <label htmlFor="cardName" className="block mb-1 font-medium">Kart Üzerindeki İsim</label>
                   <input
                     type="text"
+                    placeholder='Veysel ÖZTÜRK'
                     id="cardName"
                     {...register('cardName')}
                     onChange={handleChange}
-                    className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.cardName ? 'border-red-500' : ''}`}
+                    className={`w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.cardName ? 'border-red-500' : ''}`}
                   />
                   {errors.cardName && <p className="mt-1 text-red-500 text-sm">{errors.cardName.message}</p>}
                 </div>
@@ -195,7 +203,7 @@ const CheckoutPage = () => {
                       placeholder="AA/YY"
                       onChange={handleChange}
                       {...register('expiryDate')}
-                      className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.expiryDate ? 'border-red-500' : ''}`}
+                      className={`w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.expiryDate ? 'border-red-500' : ''}`}
                     />
                     {errors.expiryDate && <p className="mt-1 text-red-500 text-sm">{errors.expiryDate.message}</p>}
                   </div>
@@ -207,7 +215,7 @@ const CheckoutPage = () => {
                       placeholder="XXX"
                       onChange={handleChange}
                       {...register('cvv')}
-                      className={`border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.cvv ? 'border-red-500' : ''}`}
+                      className={`w-full border-amber-400 border-2 px-6 py-2 rounded-lg ${errors.cvv ? 'border-red-500' : ''}`}
                     />
                     {errors.cvv && <p className="mt-1 text-red-500 text-sm">{errors.cvv.message}</p>}
                   </div>
@@ -223,7 +231,7 @@ const CheckoutPage = () => {
           </form>
         </div>
         <div className="lg:w-1/3">
-          <div className="bg-white dark:bg-dark-card rounded-lg shadow-md p-6 sticky top-4">
+          <div className="bg-white dark:bg-dark-card rounded-lg shadow-md p-6 sticky top-20">
             <h2 className="text-lg font-semibold mb-4">Sipariş Özeti</h2>
             <div className="divide-y dark:divide-gray-700">
               {cartItems.map((item) => (
@@ -246,7 +254,7 @@ const CheckoutPage = () => {
             <div className="mt-4 space-y-2">
               <div className="flex justify-between py-2 border-b dark:border-gray-700">
                 <span>Ara Toplam</span>
-                <span>${totalAmount.toFixed(2)}</span>
+                <span>₺{totalAmount.toFixed(2)}</span>
               </div>
               <div className="flex justify-between py-2 border-b dark:border-gray-700">
                 <span>Kargo</span>
@@ -254,7 +262,7 @@ const CheckoutPage = () => {
               </div>
               <div className="flex justify-between py-2 text-lg font-semibold">
                 <span>Toplam</span>
-                <span>${totalAmount.toFixed(2)}</span>
+                <span>₺{totalAmount.toFixed(2)}</span>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-# Hyper Teknoloji Frontend Case Study
+# Hyper Teknoloji Frontend Case 
 
 This is a responsive e-commerce front-end application built with React and Redux Toolkit, featuring product listing, cart functionality, favorites, and a checkout process with form validation.
 
